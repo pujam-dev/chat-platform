@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from users.models import User
+from users.models import User,Profile
 
 
 class UserRegistrationSerializer(serializers.ModelSerializer):
@@ -33,5 +33,5 @@ class UserLoginSerializer(serializers.ModelSerializer):
 
 class UserProfileSerializer(serializers.ModelSerializer):
     class Meta:
-        model=User
-        fields=['id','name','email']
+        model=Profile
+        fields=['avatar','status','bio']
